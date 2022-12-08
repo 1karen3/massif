@@ -8,14 +8,15 @@
 </head>
 <body>
     <script>
-        const number = +prompt ('Введите количество элементов');
-        const arr = [];
+        const number=+prompt ('Введите количество элементов');
+        let arr = [];
         for (let i=0; i<number; i++ ){
-            const digit1=parseInt(prompt('Введите значения #' + (i+ 1)));
-            arr.push(digit1);
+            const digit=parseInt(prompt('Введите значения #' + (i+ 1)));
+            arr.push(digit);
         }
-        document.write(arr);
-        arr.sort();
+        console.log(arr);
+        arr.sort(function(a, b){return a-b});
+        console.log(arr);
         arr.splice(2,4);
         console.log(arr);
     </script>
